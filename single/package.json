@@ -1,0 +1,22 @@
+{
+  "name": "single",
+  "version": "1.0.0",
+  "description": "单页应用的webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/guiqide/webpack-scaffold.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "kevingui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guiqide/webpack-scaffold/issues"
+  },
+  "homepage": "https://github.com/guiqide/webpack-scaffold#readme"
+}
