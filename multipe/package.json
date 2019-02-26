@@ -1,0 +1,14 @@
+{
+  "name": "multipe",
+  "version": "1.0.0",
+  "description": "webpack，多入口脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/dev-server.js",
+    "build": "webpack --config config/webpack.dev.config.js --mode development",
+    "build:prod": "webpack --config config/webpack.prod.config.js --mode production"
+  },
+  "author": "kevingui",
+  "license": "ISC"
+}
