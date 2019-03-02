@@ -1,0 +1,10 @@
+.content {
+    padding-top: 50px;
+    display: flex;
+    justify-content:center;
+}
+.title {
+    width: 348px;
+    height: 145px;
+    background: url(../../assets/webpack.png) no-repeat;
+}

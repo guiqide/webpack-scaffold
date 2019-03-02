@@ -4,9 +4,11 @@
   "description": "单页应用的webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server",
+    "start:prod": "./node_modules/bin/webpack-dev-server",
     "build": "webpack --config config/webpack.dev.config.js --mode development",
-    "build:prod": "webpack --config config/webpack.prod.config.js --mode production"
+    "build:prod": "webpack --config config/webpack.prod.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

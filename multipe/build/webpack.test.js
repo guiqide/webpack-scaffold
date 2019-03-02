@@ -1,8 +1,20 @@
-import merge from 'webpack-merge'
-import baseConf from './webpack.common'
+/*
+ +----------------------------------------------------------------------+
+ | webpack4-scaffold                                                    |
+ +----------------------------------------------------------------------+
+ | Author: kevingui <guiqide@gmail.com>                                 |
+ +----------------------------------------------------------------------+
+ */
+const merge = require('webpack-merge')
+const baseConf = require('./webpack.common')
 
-module.export = merge(baseConf, {
+const config = merge(baseConf, {
     mode: 'development',
-     plugins: [
-     ]
 })
+
+module.exports = (env, argv) => {
+    if (config.mode === 'development') {
+        config.devtool = 'source-map'
+    }
+    return config
+}
