@@ -16,12 +16,13 @@ function resolve(dir) {
 const config = merge(baseConf, {
     mode: 'production',
     devServer: {
+        index: 'index.html',
         compress: true,
-        port: 8888,
+        port: 8889,
+        open: true,
         proxy: {
         },
-        contentBase: '',
-        publicPath: resolve('dist')
+        contentBase: resolve('dist'),
     },
     plugins: [],
     optimization: {

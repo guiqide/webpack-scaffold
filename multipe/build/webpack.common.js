@@ -93,9 +93,6 @@ const config = {
         new CleanWebpackPlugin(['../dist'], {
             allowExternal: true
         }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/app/index/index.html',
-        // }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"

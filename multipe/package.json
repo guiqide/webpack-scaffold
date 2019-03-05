@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "./node_modules/.bin/webpack-dev-server --config build/webpack.dev.js",
-    "start:prod": "./node_modules/.bin/webpack-dev-server",
+    "start:prod": "./node_modules/.bin/webpack-dev-server --config build/webpack.prod.js",
     "build:dev": "node_modules/.bin/webpack --config build/webpack.test.js",
     "build:prod": "node_modules/.bin/webpack --config build/webpack.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bb": "node build/build.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kevingui",
   "license": "ISC",

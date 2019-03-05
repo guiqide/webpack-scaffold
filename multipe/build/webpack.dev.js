@@ -17,7 +17,7 @@ const config = merge(baseConf, {
         index: 'index.html',
         compress: true,
         port: 8888,
-        open: 'Google Chrome',
+        open: true,
         proxy: {
         },
         contentBase: resolve('dist'),
