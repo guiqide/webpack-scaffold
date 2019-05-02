@@ -16,14 +16,23 @@ const precss = require('precss')
 
 require('./check-versions')()
 
+/**
+ * 功能函数：封装目录查找
+ * @param {string} dir build上一层目录的dir
+ */
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
 
+/**
+ * 
+ * @param {string} str 多页应用，每个页面的逻辑放在一个{str}目录下，入口为index.js
+ */
 function addEntry(str) {
     return `./src/app/${str}/index.js`
 }
 
+// 不带环境的配置
 const config = {
     entry: {
         index: addEntry('index'),
@@ -108,6 +117,7 @@ const config = {
     }
 }
 
+// 每个app下目录独立生成一个chunk文件，但可能造成多个依赖在每个页面都加载，不建议使用vue等框架的用户使用多页模式
 let filenames = fs.readdirSync(resolve('src/app'));
 filenames.forEach(function (filename) {
     let stats = fs.statSync(path.resolve(resolve('src/app'), filename));

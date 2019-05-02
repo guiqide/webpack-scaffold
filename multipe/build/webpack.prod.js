@@ -6,6 +6,7 @@
  +----------------------------------------------------------------------+
  */
 const path = require('path')
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConf = require('./webpack.common')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
@@ -24,7 +25,11 @@ const config = merge(baseConf, {
         },
         contentBase: resolve('dist'),
     },
-    plugins: [],
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ],
     optimization: {
         minimizer: [
             new OptimizeCSSAssetsPlugin({})
