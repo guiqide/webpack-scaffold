@@ -10,3 +10,14 @@ entry: {
     foo: addEntry('foo')
 }
 ```
+
+## 支持特性切换功能
+```
+if (process.env.NODE_ENV !== 'production') {
+    // some test env code
+}
+```
+NODE_ENV: development|production
+
+在测试环境和开发环境下为：development
+正式环境为：production
